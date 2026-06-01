@@ -1,0 +1,150 @@
+{
+  "categories": {
+    "前端开发": {
+      "weight": 10,
+      "keywords": {
+        "name": ["frontend", "front-end", "react", "vue", "angular", "nextjs", "nuxt", "css", "html", "tailwind", "ui", "web"],
+        "desc": ["前端", "界面", "组件", "页面", "react", "vue", "css", "html", "ui设计", "交互", "web"],
+        "dir": ["frontend", "front-end", "react", "vue", "ui", "web"]
+      },
+      "description": "前端开发相关技能：UI设计、组件库、页面构建、Web框架等"
+    },
+    "后端开发": {
+      "weight": 9,
+      "keywords": {
+        "name": ["backend", "back-end", "server", "api", "rest", "graphql", "node", "express", "fastapi", "django", "flask", "spring", "rust", "go", "java"],
+        "desc": ["后端", "服务器", "api", "接口", "数据库", "微服务", "中间件"],
+        "dir": ["backend", "back-end", "server", "api"]
+      },
+      "description": "后端开发相关技能：API开发、服务器端逻辑、微服务等"
+    },
+    "飞书/Lark办公": {
+      "weight": 10,
+      "keywords": {
+        "name": ["lark"],
+        "desc": ["飞书", "lark"],
+        "dir": ["lark"]
+      },
+      "description": "飞书/Lark 办公套件相关技能：文档、表格、审批、日历等"
+    },
+    "AI/机器学习": {
+      "weight": 8,
+      "keywords": {
+        "name": ["ai", "ml", "llm", "gpt", "claude", "openai", "embedding", "rag", "agent", "pytorch", "tensorflow", "langchain"],
+        "desc": ["ai", "人工智能", "机器学习", "llm", "大模型", "深度学习", "自然语言", "nlp", "rag", "agent"],
+        "dir": ["ai", "ml", "llm", "agent"]
+      },
+      "description": "AI与机器学习相关技能：大模型应用、RAG、Agent开发等"
+    },
+    "DevOps/部署": {
+      "weight": 8,
+      "keywords": {
+        "name": ["devops", "deploy", "docker", "kubernetes", "k8s", "ci", "cd", "jenkins", "github-action", "terraform"],
+        "desc": ["部署", "发布", "运维", "docker", "k8s", "kubernetes", "ci/cd", "流水线", "配置管理"],
+        "dir": ["devops", "deploy", "docker", "k8s", "ci"]
+      },
+      "description": "DevOps与部署相关技能：CI/CD、容器化、云服务部署等"
+    },
+    "数据库": {
+      "weight": 7,
+      "keywords": {
+        "name": ["database", "db", "sql", "mysql", "postgres", "mongodb", "redis", "elasticsearch", "prisma", "orm"],
+        "desc": ["数据库", "数据存储", "sql", "查询", "缓存", "索引"],
+        "dir": ["db", "database", "sql"]
+      },
+      "description": "数据库相关技能：SQL、NoSQL、ORM、数据迁移等"
+    },
+    "测试": {
+      "weight": 7,
+      "keywords": {
+        "name": ["test", "testing", "jest", "playwright", "cypress", "vitest", "pytest", "e2e", "unit-test"],
+        "desc": ["测试", "单元测试", "集成测试", "e2e", "端到端", "自动化测试", "mock"],
+        "dir": ["test", "testing", "e2e"]
+      },
+      "description": "测试相关技能：单元测试、E2E测试、自动化测试等"
+    },
+    "文档写作": {
+      "weight": 6,
+      "keywords": {
+        "name": ["doc", "docs", "documentation", "markdown", "readme", "wiki", "storybook"],
+        "desc": ["文档", "写作", "markdown", "readme", "知识库", "注释"],
+        "dir": ["doc", "docs", "documentation", "wiki"]
+      },
+      "description": "文档与写作相关技能：文档生成、API文档、技术写作等"
+    },
+    "设计/UI/UX": {
+      "weight": 6,
+      "keywords": {
+        "name": ["design", "ui", "ux", "figma", "sketch", "tailwind", "color", "animation", "icon"],
+        "desc": ["设计", "ui", "ux", "用户界面", "用户体验", "视觉", "配色", "动画", "图标"],
+        "dir": ["design", "ui", "ux"]
+      },
+      "description": "设计与UI/UX相关技能：界面设计、图标、动效等"
+    },
+    "代码质量/安全": {
+      "weight": 7,
+      "keywords": {
+        "name": ["review", "lint", "eslint", "prettier", "format", "security", "audit", "vuln"],
+        "desc": ["代码审查", "代码质量", "lint", "格式化", "安全", "审计", "漏洞"],
+        "dir": ["review", "lint", "security", "audit"]
+      },
+      "description": "代码质量与安全相关技能：代码审查、Lint、安全审计等"
+    },
+    "项目管理": {
+      "weight": 6,
+      "keywords": {
+        "name": ["project", "jira", "slack", "teamwork", "notion", "trello", "linear"],
+        "desc": ["项目", "任务", "跟踪", "管理", "协作", "sprint"],
+        "dir": ["project", "jira", "management"]
+      },
+      "description": "项目管理相关技能：任务跟踪、协作工具、敏捷开发等"
+    },
+    "移动开发": {
+      "weight": 6,
+      "keywords": {
+        "name": ["mobile", "ios", "android", "react-native", "flutter", "swift", "kotlin"],
+        "desc": ["移动", "手机", "app", "ios", "android", "小程序"],
+        "dir": ["mobile", "ios", "android", "flutter"]
+      },
+      "description": "移动开发相关技能：iOS、Android、React Native、Flutter等"
+    },
+    "性能优化": {
+      "weight": 5,
+      "keywords": {
+        "name": ["perf", "performance", "optimize", "bundle", "webpack", "vite"],
+        "desc": ["性能", "优化", "加载速度", "打包", "缓存策略"],
+        "dir": ["perf", "performance", "optimize"]
+      },
+      "description": "性能优化相关技能：性能分析、打包优化、缓存策略等"
+    },
+    "数据分析": {
+      "weight": 6,
+      "keywords": {
+        "name": ["data", "analytics", "pandas", "numpy", "jupyter", "chart", "dashboard", "bi", "etl"],
+        "desc": ["数据", "分析", "可视化", "图表", "报表", "etl", "数据仓库"],
+        "dir": ["data", "analytics", "bi"]
+      },
+      "description": "数据分析相关技能：数据可视化、报表、ETL等"
+    },
+    "技能管理": {
+      "weight": 5,
+      "keywords": {
+        "name": ["skill", "skill-manager", "skill-creator"],
+        "desc": ["skill", "技能"],
+        "dir": ["skill"]
+      },
+      "description": "技能管理与开发相关技能：技能发现、创建、管理等"
+    },
+    "办公自动化": {
+      "weight": 5,
+      "keywords": {
+        "name": ["excel", "word", "ppt", "office", "wps", "workflow", "automation"],
+        "desc": ["办公", "自动化", "工作流", "excel", "word", "ppt"],
+        "dir": ["office", "workflow"]
+      },
+      "description": "办公自动化相关技能：工作流、报表自动化等"
+    }
+  },
+  "fallback_category": "其他",
+  "fallback_description": "尚未分类的技能"
+}

@@ -1,0 +1,30 @@
+# 自动生成的文件（不要提交）
+Skill仓库.xlsx
+skills-index.json
+.skill-preferences.json
+
+# 重复/备份目录
+Skill Manager/
+
+# 外部技能（非本项目所有）
+skills/find-skills/
+skills/skill-creator/
+
+# 压缩包备份（技能归档文件）
+*.tgz
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# 系统
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Claude
+.claude/settings.local.json

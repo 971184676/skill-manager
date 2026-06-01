@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "npx skills (add|install|remove|update)",
+        "hook": "python scripts/sync-skills-repo.py"
+      }
+    ]
+  }
+}
