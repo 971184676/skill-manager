@@ -1,6 +1,6 @@
 ---
 name: skill-manager
-description: "管理所有已安装的 AI 技能(Skills)。在编程/开发任务的计划阶段自动分析项目并推荐技能组合，询问用户是否使用，支持自由调换技能。安装新 Skill 时自动同步到 Excel 仓库。用户询问技能管理时触发：列出、推荐、分类、调换。Manage all installed AI skills for Claude Code. Automatically analyzes projects and recommends skill combos during task planning, asks user for confirmation, supports free skill swapping. Auto-syncs to Excel database when new skills are installed."
+description: "管理所有已安装的 AI 技能(Skills)。在编程/开发任务的计划阶段自动分析项目并推荐技能组合，询问用户是否使用，支持自由调换技能。安装新 Skill 时自动同步到 Excel 仓库。用户询问技能管理、计划推荐、技能调换时触发：列出、推荐、分类、调换。Manage all installed AI skills for Claude Code. Automatically analyzes projects and recommends skill combos during task planning, asks user for confirmation, supports free skill swapping. Auto-syncs to Excel database when new skills are installed."
 ---
 
 # Skill Manager — 技能管理器 · Skill Manager
