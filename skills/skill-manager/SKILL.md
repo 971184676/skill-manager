@@ -1,6 +1,6 @@
 ---
 name: skill-manager
-description: "管理所有已安装的 AI 技能(Skills)，支持 Claude Code、OpenClaw、Codex、Trae、Hermes 等多种智能体。在编程/开发任务的计划阶段自动分析项目并推荐技能组合，询问用户是否使用，支持自由调换技能。在同一任务的后续步骤中，询问用户是保持原有技能组合还是推荐新的组合。安装新 Skill 时自动同步到 Excel 仓库。用户询问技能管理、计划推荐、技能调换时触发：列出、推荐、分类、调换。Manage all installed AI skills for Claude Code, OpenClaw, Codex, Trae, Hermes and other agents. Automatically analyzes projects and recommends skill combos during task planning, asks user for confirmation, supports free skill swapping. In follow-up steps of the same task, asks user whether to keep existing combo or recommend new one. Auto-syncs to Excel database when new skills are installed."
+description: "管理所有已安装的 AI 技能(Skills)，支持 Claude Code、OpenClaw、Codex、Trae、Hermes 等多种智能体。在编程/开发任务的计划阶段自动分析项目并推荐技能组合，推荐尽可能简洁且必须基于已有的技能。若现有技能无法满足需求，再推荐可下载的技能。询问用户是否按以上技能组合，想替换哪些技能？如果有的话可以说。在同一任务的后续步骤中，询问用户是保持原有技能组合还是推荐新的组合。安装新 Skill 时自动同步到 Excel 仓库。用户询问技能管理、计划推荐、技能调换时触发：列出、推荐、分类、调换。Manage all installed AI skills for Claude Code, OpenClaw, Codex, Trae, Hermes and other agents. Automatically analyzes projects and recommends skill combos during task planning. Recommendations must be concise and based on already installed skills first. Only recommend downloadable skills when existing skills cannot meet needs. Ask user whether to use this combo and which skills to replace if any. In follow-up steps of the same task, asks user whether to keep existing combo or recommend new one. Auto-syncs to Excel database when new skills are installed."
 ---
 
 # Skill Manager — 技能管理器 · Skill Manager
@@ -144,20 +144,14 @@ Step 2: Format and display recommendations
      技术栈 Stack: React, FastAPI, TypeScript
    =================================================================
 
-     [核心技能 Core Skills]
-       -> 无论项目类型，建议启用以下核心技能
-       -> Core skills recommended regardless of project type
-       1. find-skills      - 技能发现与安装 · Skill discovery & install
-       2. skill-manager    - 技能管理 · Skill management
-       3. skill-creator    - 技能创建 · Skill creation
-
-     [前端开发 Frontend]
-       -> 检测到全栈项目，推荐前端开发技能
-       -> Full-stack project detected, recommending frontend skills
-       4. frontend-design  - 前端界面设计 · Frontend UI design
+     [推荐技能 Recommended Skills]
+       -> 基于已安装技能推荐 · Based on installed skills
+       1. skill-manager    - 技能管理 · Skill management
+       2. frontend-design  - 前端界面设计 · Frontend UI design
 
    -----------------------------------------------------------------
-   是否使用以上技能组合？Use this combo?
+   是否使用以上技能组合？想替换哪些技能？如果有的话可以说。
+   Use this combo? Which skills to replace if any?
      1. 直接开始 · Start with this combo
      2. 替换技能 · Swap skills
      3. 跳过推荐 · Skip
@@ -202,8 +196,8 @@ Step 4: Start task
 
 | 规则 Rule | 中文说明 | English Description |
 |---|---|---|
-| 核心技能 Core skills | skill-manager/find-skills 默认推荐但非必须，用户可移除 | Recommended by default but removable |
-| 未安装的技能 Missing skills | 调用 `find-skills` 搜索安装 · Use find-skills to search & install |
+| 基于已有技能 Based on installed | 优先使用已安装的技能，未安装的才推荐下载 · Prioritize installed skills first, only recommend download for missing ones |
+| 简洁推荐 Concise recommendation | 推荐组合尽可能简洁，不冗余 · Keep recommended combo concise, no redundancy |
 | 偏好记忆 Preferences | 保存在 `.skill-preferences.json`，支持 `--add`/`--remove` 命令 · Persisted via CLI commands |
 
 ---
@@ -229,9 +223,8 @@ Step 2: Display confirmation prompt
    =================================================================
 
      当前技能组合 Current Combo:
-       1. find-skills      - 技能发现与安装
-       2. skill-manager    - 技能管理
-       3. frontend-design  - 前端界面设计
+       1. skill-manager    - 技能管理
+       2. frontend-design  - 前端界面设计
 
    -----------------------------------------------------------------
    选择操作 Choose action:
@@ -335,9 +328,9 @@ python scripts/skill-recommend.py --list-all
 
 | 技能 Skill | 中文协作方式 | English Integration |
 |---|---|---|
-| **find-skills** | 推荐组合中缺失技能时，调用 find-skills 搜索安装 | Call find-skills to search & install missing skills |
-| **skill-creator** | 用户需要自定义技能时，转向 skill-creator | Route to skill-creator for custom skills |
-| **其他技能 Others** | 作为推荐组合的候选池，按分类和场景推荐 | Candidate pool for recommendations by category |
+| **find-skills** | （可选）当现有技能无法满足需求时，可调用 find-skills 搜索新技能 · (Optional) When existing skills can't meet needs, may call find-skills to search for new skills |
+| **skill-creator** | （可选）当用户需要自定义技能时，可转向 skill-creator · (Optional) When user needs custom skills, may route to skill-creator |
+| **其他技能 Others** | 作为推荐组合的候选池，优先基于已安装的技能推荐 · Candidate pool for recommendations, prioritize installed skills first |
 
 ---
 

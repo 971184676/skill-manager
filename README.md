@@ -132,21 +132,23 @@ skill-manager/
 ├── scripts/                        # 工具脚本 · Tool scripts
 │   ├── sync-skills-repo.py        # 同步引擎 · Sync engine
 │   ├── skill-recommend.py         # 推荐引擎 · Recommend engine
-│   └── skill-classifier.json      # 16类分类规则 · Classification rules
+│   └── skill-classifier.json     # 16类分类规则 · Classification rules
 │
 ├── .claude/                       # Claude 配置 · Claude config
-│   └── settings.json              # PostToolUse hook 配置 · Hook config
+│   └── settings.json             # PostToolUse hook 配置 · Hook config
 │
 ├── .gitignore                     # Git 忽略规则 · Git ignore rules
-├── CLAUDE.md                      # 工作区指令 · Workspace instructions
-├── README.md                      # 项目说明 · This file
-├── requirements.txt               # Python 依赖 · Python dependencies
+├── CLAUDE.md                     # 工作区指令 · Workspace instructions
+├── README.md                     # 项目说明 · This file
+├── requirements.txt              # Python 依赖 · Python dependencies
 │
 ├── (生成的文件，不提交 · Generated files, not committed)
 │   ├── Skill仓库.xlsx             # 技能 Excel 仓库 · Skill Excel repository
 │   ├── skills-index.json          # 技能索引 · Skill index
 │   └── .skill-preferences.json    # 用户偏好 · User preferences
 ```
+
+**注意 · Note**: 本项目只包含 skill-manager 技能，find-skills 和 skill-creator 是独立的技能，不属于本项目。This project only includes the skill-manager skill. find-skills and skill-creator are independent skills and not part of this project.
 
 ---
 
@@ -287,14 +289,12 @@ Skill Manager:
 │  类型 Type: 前端项目 Frontend                               │
 │  技术栈 Stack: React, TypeScript, Vite                      │
 ├─────────────────────────────────────────────────────────────┤
-│  [核心技能 Core Skills]                                     │
-│    1. find-skills      - 技能发现与安装 · Skill discovery  │
-│    2. skill-manager    - 技能管理 · Skill management       │
+│  [推荐技能 Recommended Skills]                              │
+│    1. skill-manager    - 技能管理 · Skill management       │
+│    2. frontend-design  - 前端界面设计 · Frontend UI design │
 ├─────────────────────────────────────────────────────────────┤
-│  [前端开发 Frontend]                                        │
-│    3. frontend-design  - 前端界面设计 · Frontend UI design │
-├─────────────────────────────────────────────────────────────┤
-│  是否使用以上技能组合？Use this combo?                        │
+│  是否使用以上技能组合？想替换哪些技能？如果有的话可以说。          │
+│  Use this combo? Which skills to replace if any?            │
 │    1. 直接开始 · Start with this combo                      │
 │    2. 替换技能 · Swap skills                                │
 │    3. 跳过推荐 · Skip                                       │
@@ -319,14 +319,11 @@ Skill Manager:
 │  Type: Frontend                                            │
 │  Stack: React, TypeScript, Vite                            │
 ├─────────────────────────────────────────────────────────────┤
-│  [Core Skills]                                             │
-│    1. find-skills      - Skill discovery & install         │
-│    2. skill-manager    - Skill management                  │
+│  [Recommended Skills]                                      │
+│    1. skill-manager    - Skill management                  │
+│    2. frontend-design  - Frontend UI design                │
 ├─────────────────────────────────────────────────────────────┤
-│  [Frontend]                                                │
-│    3. frontend-design  - Frontend UI design                │
-├─────────────────────────────────────────────────────────────┤
-│  Use this combo?                                           │
+│  Use this combo? Which skills to replace if any?            │
 │    1. Start with this combo                                │
 │    2. Swap skills                                          │
 │    3. Skip                                                 │
@@ -407,9 +404,8 @@ Skill Manager:
 │  Detected: this is a follow-up to the same task            │
 ├─────────────────────────────────────────────────────────────┤
 │  当前技能组合 Current Combo:                                │
-│    1. find-skills      - 技能发现与安装                    │
-│    2. skill-manager    - 技能管理                          │
-│    3. frontend-design  - 前端界面设计                      │
+│    1. skill-manager    - 技能管理                          │
+│    2. frontend-design  - 前端界面设计                      │
 ├─────────────────────────────────────────────────────────────┤
 │  选择操作 Choose action:                                    │
 │    1. 保持原有技能组合 · Keep current combo                │
@@ -433,9 +429,8 @@ Skill Manager:
 │  Detected: this is a follow-up to the same task            │
 ├─────────────────────────────────────────────────────────────┤
 │  Current Combo:                                            │
-│    1. find-skills      - Skill discovery & install         │
-│    2. skill-manager    - Skill management                  │
-│    3. frontend-design  - Frontend UI design                │
+│    1. skill-manager    - Skill management                  │
+│    2. frontend-design  - Frontend UI design                │
 ├─────────────────────────────────────────────────────────────┤
 │  Choose action:                                            │
 │    1. Keep current combo                                   │
