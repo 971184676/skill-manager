@@ -1,0 +1,4 @@
+# Skill Manager Dependencies
+# This file helps identify this as a Python project
+
+openpyxl>=3.1.0
