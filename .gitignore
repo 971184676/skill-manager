@@ -52,3 +52,7 @@ var/
 wheels/
 *.whl
 *.man
+
+# External skills (not developed in this repo)
+skills/find-skills/
+skills/skill-creator/
