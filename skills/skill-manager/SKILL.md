@@ -1,6 +1,6 @@
 ---
 name: skill-manager
-description: "管理所有已安装的 AI 技能(Skills)，支持 Claude Code、OpenClaw、Codex、Tree、Hermes 等多种智能体。在编程/开发任务的计划阶段自动分析项目并推荐技能组合，询问用户是否使用，支持自由调换技能。在同一任务的后续步骤中，询问用户是保持原有技能组合还是推荐新的组合。安装新 Skill 时自动同步到 Excel 仓库。用户询问技能管理、计划推荐、技能调换时触发：列出、推荐、分类、调换。Manage all installed AI skills for Claude Code, OpenClaw, Codex, Tree, Hermes and other agents. Automatically analyzes projects and recommends skill combos during task planning, asks user for confirmation, supports free skill swapping. In follow-up steps of the same task, asks user whether to keep existing combo or recommend new one. Auto-syncs to Excel database when new skills are installed."
+description: "管理所有已安装的 AI 技能(Skills)，支持 Claude Code、OpenClaw、Codex、Trae、Hermes 等多种智能体。在编程/开发任务的计划阶段自动分析项目并推荐技能组合，询问用户是否使用，支持自由调换技能。在同一任务的后续步骤中，询问用户是保持原有技能组合还是推荐新的组合。安装新 Skill 时自动同步到 Excel 仓库。用户询问技能管理、计划推荐、技能调换时触发：列出、推荐、分类、调换。Manage all installed AI skills for Claude Code, OpenClaw, Codex, Trae, Hermes and other agents. Automatically analyzes projects and recommends skill combos during task planning, asks user for confirmation, supports free skill swapping. In follow-up steps of the same task, asks user whether to keep existing combo or recommend new one. Auto-syncs to Excel database when new skills are installed."
 ---
 
 # Skill Manager — 技能管理器 · Skill Manager
@@ -9,9 +9,9 @@ description: "管理所有已安装的 AI 技能(Skills)，支持 Claude Code、
 
 ## 📖 概述 · Overview
 
-**中文** | 本技能是全套 Skill 管理系统的核心入口，支持 **Claude Code、OpenClaw、Codex、Tree、Hermes** 等多种智能体平台。当你开始一个编程任务时，它会自动分析项目上下文、推荐最优技能组合、并让你自由调换。同时，每当有新技能被安装时，它会自动同步到 Excel 仓库。
+**中文** | 本技能是全套 Skill 管理系统的核心入口，支持 **Claude Code、OpenClaw、Codex、Trae、Hermes** 等多种智能体平台。当你开始一个编程任务时，它会自动分析项目上下文、推荐最优技能组合、并让你自由调换。同时，每当有新技能被安装时，它会自动同步到 Excel 仓库。
 
-**English** | This skill is the core entry point for the Skill Management system, supporting **Claude Code, OpenClaw, Codex, Tree, Hermes** and other agent platforms. When you start a programming task, it automatically analyzes the project context, recommends the best skill combination, and lets you freely swap skills. It also auto-syncs to the Excel database whenever new skills are installed.
+**English** | This skill is the core entry point for the Skill Management system, supporting **Claude Code, OpenClaw, Codex, Trae, Hermes** and other agent platforms. When you start a programming task, it automatically analyzes the project context, recommends the best skill combination, and lets you freely swap skills. It also auto-syncs to the Excel database whenever new skills are installed.
 
 ---
 
@@ -22,7 +22,7 @@ description: "管理所有已安装的 AI 技能(Skills)，支持 Claude Code、
 | **Claude Code** | 主要目标平台 · Primary target platform |
 | **OpenClaw** | 支持多智能体协作 · Multi-agent collaboration |
 | **Codex** | 代码生成与编辑 · Code generation & editing |
-| **Tree** | 树状结构项目导航 · Tree-structured project navigation |
+| **Trae** | Trae AI 开发平台 · Trae AI development platform |
 | **Hermes** | 消息传递与任务编排 · Messaging & task orchestration |
 
 ---
