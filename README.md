@@ -269,6 +269,187 @@ python scripts/skill-recommend.py --remove lark-vc           # 移除偏好 · R
 
 ---
 
+## 🎬 使用示例 · Usage Examples
+
+### 示例 1：创建新的 React 项目 · Example 1: Create a new React project
+
+**中文** |
+
+假设你想创建一个 React + TypeScript 项目，Skill Manager 会这样工作：
+
+```
+用户：帮我创建一个 React + TypeScript 项目
+
+Skill Manager:
+┌─────────────────────────────────────────────────────────────┐
+│  >> Skill 组合推荐 · Skill Combo Recommendation <<         │
+│  项目 Project: my-react-app                                │
+│  类型 Type: 前端项目 Frontend                               │
+│  技术栈 Stack: React, TypeScript, Vite                      │
+├─────────────────────────────────────────────────────────────┤
+│  [核心技能 Core Skills]                                     │
+│    1. find-skills      - 技能发现与安装 · Skill discovery  │
+│    2. skill-manager    - 技能管理 · Skill management       │
+├─────────────────────────────────────────────────────────────┤
+│  [前端开发 Frontend]                                        │
+│    3. frontend-design  - 前端界面设计 · Frontend UI design │
+├─────────────────────────────────────────────────────────────┤
+│  是否使用以上技能组合？Use this combo?                        │
+│    1. 直接开始 · Start with this combo                      │
+│    2. 替换技能 · Swap skills                                │
+│    3. 跳过推荐 · Skip                                       │
+└─────────────────────────────────────────────────────────────┘
+
+用户：1
+
+Skill Manager: ✓ 已确认技能组合，开始创建项目...
+```
+
+**English** |
+
+Suppose you want to create a React + TypeScript project, Skill Manager will work like this:
+
+```
+User: Help me create a React + TypeScript project
+
+Skill Manager:
+┌─────────────────────────────────────────────────────────────┐
+│  >> Skill Combo Recommendation <<                          │
+│  Project: my-react-app                                     │
+│  Type: Frontend                                            │
+│  Stack: React, TypeScript, Vite                            │
+├─────────────────────────────────────────────────────────────┤
+│  [Core Skills]                                             │
+│    1. find-skills      - Skill discovery & install         │
+│    2. skill-manager    - Skill management                  │
+├─────────────────────────────────────────────────────────────┤
+│  [Frontend]                                                │
+│    3. frontend-design  - Frontend UI design                │
+├─────────────────────────────────────────────────────────────┤
+│  Use this combo?                                           │
+│    1. Start with this combo                                │
+│    2. Swap skills                                          │
+│    3. Skip                                                 │
+└─────────────────────────────────────────────────────────────┘
+
+User: 1
+
+Skill Manager: ✓ Combo confirmed, starting project...
+```
+
+### 示例 2：添加新技能后自动同步 · Example 2: Auto-sync after adding new skill
+
+**中文** |
+
+```bash
+# 用户安装一个新技能
+npx skills add lark-doc
+
+# Skill Manager 自动触发同步
+[Skill Manager] 检测到技能安装，自动同步到仓库...
+[Skill Manager] 已添加: lark-doc - 飞书文档操作技能
+[Skill Manager] 同步完成，更新了 Skill仓库.xlsx 和 skills-index.json
+
+# 用户查看所有技能
+python scripts/skill-recommend.py --list-all
+
+输出：
+┌─────────────────────────────────────────────────────────────┐
+│  技能分类统计 · Skill Category Statistics                  │
+│  总技能数: 45                                              │
+│  ├─ 前端开发 Frontend: 12                                  │
+│  ├─ 后端开发 Backend: 8                                    │
+│  ├─ 飞书/Lark办公 Lark Office: 6                           │
+│  ├─ AI/机器学习 AI/ML: 5                                   │
+│  ├─ 测试 Testing: 4                                        │
+│  └─ 其他 Others: 10                                        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**English** |
+
+```bash
+# User installs a new skill
+npx skills add lark-doc
+
+# Skill Manager auto-triggers sync
+[Skill Manager] Skill installation detected, auto-syncing...
+[Skill Manager] Added: lark-doc - Lark Document Operations
+[Skill Manager] Sync complete, updated Skill仓库.xlsx and skills-index.json
+
+# User lists all skills
+python scripts/skill-recommend.py --list-all
+
+Output:
+┌─────────────────────────────────────────────────────────────┐
+│  Skill Category Statistics                                 │
+│  Total: 45                                                │
+│  ├─ Frontend: 12                                          │
+│  ├─ Backend: 8                                            │
+│  ├─ Lark Office: 6                                        │
+│  ├─ AI/ML: 5                                              │
+│  ├─ Testing: 4                                            │
+│  └─ Others: 10                                            │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 示例 3：同一任务的后续步骤 · Example 3: Follow-up in same task
+
+**中文** |
+
+```
+用户：帮我在刚才的 React 项目中添加一个登录页面
+
+Skill Manager:
+┌─────────────────────────────────────────────────────────────┐
+│  >> 技能组合选择 · Skill Combo Choice <<                   │
+│  检测到这是同一任务的后续步骤                               │
+│  Detected: this is a follow-up to the same task            │
+├─────────────────────────────────────────────────────────────┤
+│  当前技能组合 Current Combo:                                │
+│    1. find-skills      - 技能发现与安装                    │
+│    2. skill-manager    - 技能管理                          │
+│    3. frontend-design  - 前端界面设计                      │
+├─────────────────────────────────────────────────────────────┤
+│  选择操作 Choose action:                                    │
+│    1. 保持原有技能组合 · Keep current combo                │
+│    2. 重新推荐技能组合 · Recommend new combo               │
+│    3. 手动调整技能组合 · Adjust manually                   │
+└─────────────────────────────────────────────────────────────┘
+
+用户：1
+
+Skill Manager: ✓ 保持原有技能组合，继续添加登录页面...
+```
+
+**English** |
+
+```
+User: Help me add a login page to the React project
+
+Skill Manager:
+┌─────────────────────────────────────────────────────────────┐
+│  >> Skill Combo Choice <<                                  │
+│  Detected: this is a follow-up to the same task            │
+├─────────────────────────────────────────────────────────────┤
+│  Current Combo:                                            │
+│    1. find-skills      - Skill discovery & install         │
+│    2. skill-manager    - Skill management                  │
+│    3. frontend-design  - Frontend UI design                │
+├─────────────────────────────────────────────────────────────┤
+│  Choose action:                                            │
+│    1. Keep current combo                                   │
+│    2. Recommend new combo                                 │
+│    3. Adjust manually                                      │
+└─────────────────────────────────────────────────────────────┘
+
+User: 1
+
+Skill Manager: ✓ Keeping current combo, adding login page...
+```
+
+---
+
 ## 📄 License
 
 MIT License - 详见 [LICENSE](LICENSE) 文件。
