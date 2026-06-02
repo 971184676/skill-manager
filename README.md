@@ -6,7 +6,10 @@ Claude Code 技能管理器 · Skill Manager for Claude Code
 
 自动管理 · 智能推荐 · 自由调换
 
-[Claude Code] [Skill Manager] [Python 3.8+] [License MIT]
+![Claude Code](https://img.shields.io/badge/Claude_Code-black?style=flat-square)
+![Skill Manager](https://img.shields.io/badge/Skill_Manager-blue?style=flat-square)
+![Python 3.8+](https://img.shields.io/badge/Python-3.8+-green?style=flat-square)
+![License MIT](https://img.shields.io/badge/License-MIT-orange?style=flat-square)
 
 ---
 
