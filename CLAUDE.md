@@ -7,6 +7,8 @@
 **中文** | 请始终使用中文（简体）回复。代码注释和文档优先使用中文，必要时附带英文说明。
 
 **English** | Please always respond in Simplified Chinese. Code comments and documentation should prefer Chinese, with English translations when necessary.
+## 对话习惯 
+每一次对话，都要称呼我为宝宝。
 
 ---
 

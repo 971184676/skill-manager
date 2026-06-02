@@ -1,6 +1,6 @@
 ---
 name: skill-manager
-description: "管理所有已安装的 AI 技能(Skills)。在编程/开发任务的计划阶段自动分析项目并推荐技能组合，询问用户是否使用，支持自由调换技能。安装新 Skill 时自动同步到 Excel 仓库。用户询问技能管理、计划推荐、技能调换时触发：列出、推荐、分类、调换。Manage all installed AI skills for Claude Code. Automatically analyzes projects and recommends skill combos during task planning, asks user for confirmation, supports free skill swapping. Auto-syncs to Excel database when new skills are installed."
+description: "管理所有已安装的 AI 技能(Skills)。在编程/开发任务的计划阶段自动分析项目并推荐技能组合，询问用户是否使用，支持自由调换技能。在同一任务的后续步骤中，询问用户是保持原有技能组合还是推荐新的组合。安装新 Skill 时自动同步到 Excel 仓库。用户询问技能管理、计划推荐、技能调换时触发：列出、推荐、分类、调换。Manage all installed AI skills for Claude Code. Automatically analyzes projects and recommends skill combos during task planning, asks user for confirmation, supports free skill swapping. In follow-up steps of the same task, asks user whether to keep existing combo or recommend new one. Auto-syncs to Excel database when new skills are installed."
 ---
 
 # Skill Manager — 技能管理器 · Skill Manager
@@ -39,7 +39,14 @@ description: "管理所有已安装的 AI 技能(Skills)。在编程/开发任�
 |---|---|
 | 纯对话/问答 Pure chat | 不涉及编码或技能 · No coding or skills involved |
 | 用户明确跳过 User says skip | "不用推荐"、"跳过" · "Don't recommend" / "Skip" |
-| 同一任务后续追问 Follow-up | 除非任务类型变化 · Unless the task type changes |
+
+---
+
+### 🔄 后续任务触发 · Follow-up Task Trigger
+
+| 场景 Scenario | 中文说明 | English Description |
+|---|---|---|
+| 同一任务后续追问 Follow-up | 询问用户：保持现有组合 OR 重新推荐 · Ask user: keep existing combo OR re-recommend |
 
 ---
 
@@ -170,6 +177,49 @@ Step 4: Start task
 | 核心技能 Core skills | skill-manager/find-skills 默认推荐但非必须，用户可移除 | Recommended by default but removable |
 | 未安装的技能 Missing skills | 调用 `find-skills` 搜索安装 · Use find-skills to search & install |
 | 偏好记忆 Preferences | 保存在 `.skill-preferences.json`，支持 `--add`/`--remove` 命令 · Persisted via CLI commands |
+
+---
+
+### 流程 E：同一任务后续步骤 · 选择技能组合
+### Flow E: Same Task Follow-up · Choose Skill Combo
+
+**中文** | 当用户在同一任务下提出后续编程/修改需求时，按照以下步骤执行：
+
+**English** | When user presents follow-up programming/modification needs in the same task, follow these steps:
+
+```
+Step 1: Detect task context
+   - Is this a follow-up to the same original task?
+   - Has a skill combo already been selected for this task?
+
+Step 2: Display confirmation prompt
+
+   =================================================================
+     >> 技能组合选择 · Skill Combo Choice <<
+     检测到这是同一任务的后续步骤
+     Detected: this is a follow-up to the same task
+   =================================================================
+
+     当前技能组合 Current Combo:
+       1. find-skills      - 技能发现与安装
+       2. skill-manager    - 技能管理
+       3. frontend-design  - 前端界面设计
+
+   -----------------------------------------------------------------
+   选择操作 Choose action:
+     1. 保持原有技能组合 · Keep current combo
+     2. 重新推荐技能组合 · Recommend new combo
+     3. 手动调整技能组合 · Adjust manually
+   -----------------------------------------------------------------
+
+Step 3: Wait for user choice
+   - [1] -> Keep combo, continue with current skills
+   - [2] -> Re-run full recommendation (Flow C)
+   - [3] -> Enter skill swap flow (Flow D)
+
+Step 4: Continue with task
+   Proceed with original task logic based on user's choice.
+```
 
 ---
 

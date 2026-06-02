@@ -3,7 +3,12 @@
     "PostToolUse": [
       {
         "matcher": "npx skills (add|install|remove|update)",
-        "hook": "python scripts/sync-skills-repo.py"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python scripts/sync-skills-repo.py"
+          }
+        ]
       }
     ]
   }
