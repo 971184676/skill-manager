@@ -150,6 +150,22 @@ skill-manager/
 
 ---
 
+## 📝 关于 CLAUDE.md · About CLAUDE.md
+
+**中文** | `CLAUDE.md` 是工作区配置文件，包含了我的个人使用习惯和技能管理器的工作流程。
+
+如果你要使用这个技能，**请将 CLAUDE.md 中关于 skill-manager 的内容复制到你自己的 CLAUDE.md 文件中**，或者让 AI 帮忙复制进去。
+
+**注意**：示例中的 `CLAUDE.md` 包含了我的个人对话习惯（如称呼用户为"宝宝"），请根据你自己的需要进行调整。
+
+**English** | `CLAUDE.md` is the workspace configuration file that contains my personal preferences and the skill manager workflow.
+
+If you want to use this skill, **please copy the skill-manager related content from CLAUDE.md to your own CLAUDE.md file**, or ask AI to do it for you.
+
+**Note**: The example `CLAUDE.md` includes my personal conversation preferences (like calling the user "宝宝"), please adjust to your own needs.
+
+---
+
 ## 🛠 CLI 命令参考 · CLI Reference
 
 ### sync-skills-repo.py · 同步工具
